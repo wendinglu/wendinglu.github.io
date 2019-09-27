@@ -1,0 +1,37 @@
+.project-supertitle {
+  font-size: 30px;
+  line-height: 41px;
+  text-transform: uppercase;
+}
+
+.project-subtitle {
+  display: flex;
+  color: $gray-3;
+  font-size: 14px;
+  padding-top: 15px;
+  margin-bottom: 40px;
+
+  .roles-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+  }
+
+  .left, .right {
+    flex-basis: 50%;
+  }
+}
+
+
+.project-section, .ps {
+  margin-bottom: 40px;
+}
+
+.project-heading, .ph {
+  @extend h3;
+}
+
+.ph2 {
+  @extend h4;
+}
