@@ -4,6 +4,19 @@
 // If you have an initialization partial (or equivalent), you should move these
 // lines to that file. NOTE: Edit the lines to remove "!default".
 
+// Responsive breakpoints
+$screen-xs: 576px; //large phones
+$screen-sm: 768px; //tablet portrait
+$screen-md: 992px; //tablets and small desktop
+$screen-lg: 1200px; //desktop
+
+// Responsive mixins
+@mixin xs { @media (min-width: #{$screen-xs}) {@content;} } // Tiny devices
+@mixin sm { @media (min-width: #{$screen-sm}) {@content;} } // Small devices
+@mixin md { @media (min-width: #{$screen-md}) {@content;} } // Medium devices
+@mixin lg { @media (min-width: #{$screen-lg}) {@content;} } // Large devices
+@mixin xl { @media (min-width: #{$screen-xl}) {@content;} } // Extra large devices
+
 // The font size set on the root html element.
 $base-font-size: 16px !default;
 

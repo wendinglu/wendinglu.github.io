@@ -1,3 +1,7 @@
+.works-grid {
+
+}
+
 .project-supertitle {
   font-size: 30px;
   line-height: 41px;
@@ -23,15 +27,19 @@
   }
 }
 
-
-.project-section, .ps {
-  margin-bottom: 40px;
-}
-
 .project-heading, .ph {
-  @extend h3;
+  grid-column: span 1;
+  @include lg { grid-column: 1 / 5 }
 }
 
-.ph2 {
-  @extend h4;
+.pd, .ph2 {
+  grid-column: span 1;
+  @include lg {
+    margin-left: 30px;
+    grid-column: 5/ 13;
+  }
 }
+
+.project-heading, .ph { @extend h3; }
+
+.ph2 { @extend h4;}
