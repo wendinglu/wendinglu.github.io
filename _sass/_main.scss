@@ -56,76 +56,21 @@ h1 + p, h2 + p, h3 + p {
 
 //Grid
 .container {
-  margin: 0 auto;
-  height: 100vh;
   margin: 0 40px;
+
   display: grid;
   justify-items: start;
   justify-content: center;
   grid-gap: 30px 30px;
-  grid-template-rows: [nav-row] 90px auto;
+  grid-template-rows: [nav-row] auto auto;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 
-  @include lg {
-    margin: 0 auto;
-    max-width: 1140px;
-    grid-template-columns: repeat(12, [col] 1fr);
-  }
-}
-
-// navigation
-.nav {
-  grid-area: nav-row / 1 / nav-row / 13;
-  justify-self: right;
-  font-size: $base-font-size;
-  letter-spacing: 0.03em;
-  font-weight: 600;
-}
-
-.nav-links {
-  ul { list-style-type: none }
-  li {
-    display: inline-block;
-    text-transform: uppercase;
-
-    &:not(:last-child) {
-      padding-right: 80px;
-    }
-  }
-}
-
-.navbar-nav .nav-link {
-  line-height: 16px;
-  transition: color 0.1s,background-color 0.1s,padding 0.3s ease-in;
-
-  // transition line
-  &::before {
-    content: '';
-    display: block;
-    position: absolute;
-    bottom: 3px;
-    left: 0;
-    height: 3px;
-    width: 100%;
-    background-color: $body-text-color;
-    transform-origin: right top;
-    transform: scale(0, 1);
-    transition: color 0.1s,transform 0.3s ease-out;
-  }
-
-  &:hover::before, &:focus::before, &.active::before {
-    transform-origin: left top;
-    transform: scale(1, 1);
-  }
-}
-
-.nav-item .fab {
-  display: inline-block;
-  margin-left: 30px;
-}
-
-.navbar-brand {
-  img { width: 200px }
+  // @include lg {
+  //   margin: 0 auto;
+  //   max-width: 1140px;
+  //   grid-template-rows: [nav-row] 90px auto;
+  //   grid-template-columns: repeat(12, [col] 1fr);
+  // }
 }
 
 
