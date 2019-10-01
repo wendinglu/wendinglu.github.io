@@ -18,7 +18,7 @@ $screen-lg: 1200px; //desktop
 @mixin xl { @media (min-width: #{$screen-xl}) {@content;} } // Extra large devices
 
 // The font size set on the root html element.
-$base-font-size: 16px !default;
+$base-font-size: 14px !default;
 
 // The base line height determines the basic unit of vertical rhythm.
 $base-line-height: 24px !default;

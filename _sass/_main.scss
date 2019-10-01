@@ -9,12 +9,20 @@ body {
   font-weight: 500;
   font-size: $base-font-size;
   line-height: 1.625;
+
+  @include lg {
+    font-size: $base-font-size * 1.28;
+  }
 }
 
 a {
   color: $link-color;
   text-decoration: none;
   &:hover { color: #CE0A26; }
+}
+
+p, ol {
+  font-size: 1.5rem;
 }
 
 body,
@@ -54,60 +62,50 @@ h1 + p, h2 + p, h3 + p {
   margin-top: 30px;
 }
 
+hr {
+  display: inline-block;
+  border: $line;
+}
+
 //Grid
 .container {
-  margin: 0 40px;
-
+  margin: 0 auto;
+  padding: 0 30px;
   display: grid;
   justify-items: start;
   justify-content: center;
   grid-gap: 30px 30px;
-  grid-template-rows: [nav-row] auto auto;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-rows: [nav-row] 90px auto;
+  grid-template-columns: 1fr;
+  max-width: 1140px;
 
-  // @include lg {
-  //   margin: 0 auto;
-  //   max-width: 1140px;
-  //   grid-template-rows: [nav-row] 90px auto;
-  //   grid-template-columns: repeat(12, [col] 1fr);
-  // }
+  @include md {
+    grid-template-columns: 1fr 1fr;
+  }
 }
-
 
 //MAIN
-.main-left {
-  // height: 100%;
-  height: 520px;
-}
 
-.main-left.lg {
+.main-left {
   grid-column: span 1;
-  @include lg { grid-column: 1 / 9 }
+  @include lg { grid-column: 1 / 2 }
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  border-right: $line;
+  // border-right: $line;
 
   .h1 { max-width: 1000px }
   .description { max-width: 500px }
 
   & + .main-right {
     grid-column: span 1;
-    @include lg {grid-column: 9 / 13 }
+    // @include lg {grid-column: 2 / -1 }
   }
 }
 
 .main-left.sm {
-  grid-column: 1 / 3;
-  & + .main-right { grid-column: 3 / 13 }
-
-  border-left: $line;
-  position: relative;
-  top: 180px;
-  left: 50px;
-
   .h1 {
     width: 40px; //Adjusts width because of rotation
     transform-origin: center left;
@@ -115,16 +113,15 @@ h1 + p, h2 + p, h3 + p {
   }
 }
 
-.main-right {
-  width: 100%;
-}
-
 .full-grid {
-  width: 100%;
-  grid-column: 1 / span 12;
+  grid-column: 1 / -1;
 }
 
 // work
+.work-item {
+  justify-self: stretch;
+}
+
 .work-image {
   height: 300px;
   width: 100%;
