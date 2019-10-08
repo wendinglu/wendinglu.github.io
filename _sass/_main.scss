@@ -6,11 +6,11 @@ html {
 body {
   font-family: 'Avenir Next', sans-serif;
   background-color: #fff;
-  font-weight: 500;
+  font-weight: normal;
   font-size: $base-font-size;
   line-height: 1.625;
 
-  @include lg {
+  @include md {
     font-size: $base-font-size * 1.28;
   }
 }
@@ -18,26 +18,31 @@ body {
 a {
   color: $link-color;
   text-decoration: none;
-  &:hover { color: #CE0A26; }
+  font-weight: 600;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 p, ol {
   font-size: 1.5rem;
+
+  &:first-child { margin-top: 0}
 }
 
-body,
-.navbar-nav .nav-link,
-.navbar-nav .nav-link.active {
+body {
   color: $body-text-color;
 }
 
 h1, .h1 {
   font-size: $h1-font-size;
   font-weight: 600;
-  letter-spacing: 0.085em;
-  text-transform: uppercase;
+  letter-spacing: 0.015em;
+  // text-transform: uppercase;
   line-height: 1.1;
   color: $dark-text-color;
+  margin-bottom: 80px;
 }
 
 h2, .h2 {
@@ -48,18 +53,25 @@ h2, .h2 {
 }
 
 h3 {
+  margin-top: 0px;
   font-size: $h3-font-size;
-  font-weight: normal;
+  font-weight: 500;
 }
 
 h4 {
-  font-size: $h4-font-size;
-  font-weight: 300;
+  font-size: 1rem;
+  font-weight: 600;
   text-transform: uppercase;
 }
 
-h1 + p, h2 + p, h3 + p {
-  margin-top: 30px;
+h5 {
+  font-size: $h5-font-size;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+h1 + p, h2 + p, h3 + p, h4 + p {
+  margin-top: 3rem;
 }
 
 hr {
@@ -75,7 +87,7 @@ hr {
   justify-items: start;
   justify-content: center;
   grid-gap: 30px 30px;
-  grid-template-rows: [nav-row] 90px auto;
+  grid-template-rows: [nav-row] 140px auto;
   grid-template-columns: 1fr;
   max-width: 1140px;
 
@@ -84,71 +96,36 @@ hr {
   }
 }
 
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
 //MAIN
-
-.main-left {
-  grid-column: span 1;
-  @include lg { grid-column: 1 / 2 }
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 100%;
-  // border-right: $line;
-
-  .h1 { max-width: 1000px }
-  .description { max-width: 500px }
-
-  & + .main-right {
-    grid-column: span 1;
-    // @include lg {grid-column: 2 / -1 }
-  }
-}
-
-.main-left.sm {
-  .h1 {
-    width: 40px; //Adjusts width because of rotation
-    transform-origin: center left;
-    transform: rotate(90deg) translateY(4px) translateX(-250px);
-  }
-}
-
 .full-grid {
   grid-column: 1 / -1;
 }
 
-// work
-.work-item {
-  justify-self: stretch;
-}
+.main-index {
+  @extend .full-grid;
 
-.work-image {
-  height: 300px;
-  width: 100%;
-  background-color: #f2f2f2;
-}
-
-.work-title {
-  font-size: 24px;
-  font-weight: 600;
-}
-
-.work-subtitle {
-  text-transform: uppercase;
-  font-size: 16px;
-  font-weight: 500;
-  letter-spacing: 0.07em;
-  color: $gray-3;
-}
-
-.work-item-desc {
-  margin-top: 25px;
-  display: flex;
-  justify-content: space-between;
+  .h1 {
+    margin-top: 80px;
+    margin-bottom: 120px;
+  }
 }
 
 // FOOTER
 footer {
+  padding: 100px 30px 50px 30px;
+  text-align: right;
+  max-width: 1140px;
+  margin: auto;
+
+  font-size: 1rem;
+  color: $gray-4;
+
   .long-logo {
     width: 200px;
     margin-bottom: 30px;

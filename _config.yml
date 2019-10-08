@@ -26,6 +26,11 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://www.wending.lu" # the base hostname & protocol for your site, e.g. http://example.com
 instagram: thewending
 
+defaults:
+  - scope:
+      path: "assets/images"
+    values:
+      image: true
 # Build settings
 
 # Exclude from processing.

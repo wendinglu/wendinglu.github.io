@@ -1,36 +1,64 @@
+// work list
+.work-item {
+  justify-self: stretch;
+
+  // &:nth-last-child(2) { margin-top: -30px }
+  &:nth-last-child(1) { margin-top: 100px }
+}
+
+.work-title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.work-subtitle, .work-date {
+  // text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: $gray-4;
+}
+
+.work-item-desc {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+// Work subpage
 .project-supertitle {
-  font-size: 30px;
-  line-height: 41px;
-  text-transform: uppercase;
+  margin-top: 10rem;
+  @extend h3;
+  // text-transform: uppercase;
 }
 
 .project-subtitle {
-  display: flex;
   color: $gray-3;
-  font-size: 14px;
-  padding-top: 15px;
-  margin-bottom: 40px;
+  font-size: 1rem;
+  width: 100%;
+}
 
-  .roles-list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    line-height: 1.5;
+.work-image {
+  height: 300px;
+  width: 100%;
+  background-color: #f2f2f2;
+  object-fit: cover;
+}
+
+.pd {
+  @include md {
+    grid-column: 2 / span 1;
   }
 
-  .left, .right {
-    flex-basis: 50%;
+  h4:not(:first-child) {
+    margin-top: 6rem;
   }
 }
 
-.project-heading, .ph {
-  grid-column: span 1;
+.full-image {
+  grid-column: 1 / -1;
+  object-fit: cover;
+
+  img { max-width: 100%; }
 }
-
-.pd, .ph2 {
-  grid-column: span 1;
-}
-
-.project-heading, .ph { @extend h3; }
-
-.ph2 { @extend h4;}

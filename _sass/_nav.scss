@@ -1,12 +1,23 @@
 // navigation
 .nav {
-  font-size: $base-font-size;
-  letter-spacing: 0.03em;
-  font-weight: 600;
   grid-row: nav-row;
   grid-column: 1 / -1; //spans whole row
-  justify-self: right;
+  justify-self: stretch;
   z-index: 3; // Above other elements
+  padding-bottom: 30px;
+
+  // fonts
+  font-size: $h4-font-size;
+  font-weight: 600;
+
+  //separate logo and nav
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+
+  @include md {
+    align-self: end;
+  }
 }
 
 // Drawing/animating hamburger icon
@@ -72,6 +83,14 @@
   }
 }
 
+.nav-brand {
+  position: relative;
+  top: 35px;
+  @include md { top: 0 }
+
+  a { color: $dark-text-color }
+}
+
 // Show the menu if checked
 .nav-hamburger:checked ~ .navbar-nav {
   transform: translate(0, 0) scaleY(1);
@@ -79,31 +98,35 @@
   pointer-events: all;
 }
 
+.nav-hamburger, .nav-hamburger-icon {
+  @include md { display: none }
+}
+
 .navbar-nav {
   margin: 0;
-  padding: 0 40px;
-  background: #eeeeee;
+  padding: 80px 40px 30px 50px;
+  background: #ffffff;
+  border-bottom: 1px solid #efefef;
   list-style-type: none;
 
   // Hide the menu in mobile view
   position: absolute;
   left: 0;
   right: 0;
-  padding-top: 70px;
   opacity: 1;
   transform-origin: 0% 0%;
   transform: translate(0, -100%) scaleY(0.5);
   transition: transform 0.5s ease, opacity 0.5s ease, max-height 0.5s ease-out;
 
   li {
-    text-transform: uppercase;
     text-align: right;
     line-height: 50px;
   }
 
-  @include lg {
+  @include md {
     position: relative;
     padding: 0;
+    border: none;
     transform: none;
 
     li { display: inline-block }
@@ -111,38 +134,12 @@
   }
 }
 
-
-/* Navbar underlines
-// .navbar-nav .nav-link {
-//   line-height: 16px;
-//   transition: color 0.1s,background-color 0.1s,padding 0.3s ease-in;
-//
-//   // transition line
-//   &::before {
-//     content: '';
-//     display: block;
-//     position: absolute;
-//     bottom: 3px;
-//     left: 0;
-//     height: 3px;
-//     width: 100%;
-//     background-color: $body-text-color;
-//     transform-origin: right top;
-//     transform: scale(0, 1);
-//     transition: color 0.1s,transform 0.3s ease-out;
-//   }
-//
-//   &:hover::before, &:focus::before, &.active::before {
-//     transform-origin: left top;
-//     transform: scale(1, 1);
-//   }
-// }
-*/
+.navbar-nav .nav-link,
+.navbar-nav .nav-link.active {
+  color: $body-text-color;
+  font-weight: normal;
+}
 
 // social icons
 .nav-item .fab {
-}
-
-.navbar-brand {
-  img { width: 200px }
 }
