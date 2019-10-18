@@ -45,23 +45,13 @@
 
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link {% if page.active == 'about' %}active{% endif %}" href="/about">About</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link {% if page.active == 'work' %}active{% endif %}" href="/work">Work</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link {% if page.active == 'about' %}active{% endif %}" href="/about">About</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link {% if page.active == 'work' %}active{% endif %}" href="/resume">Resume</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://www.linkedin.com/in/wending-lu/">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://www.instagram.com/thewending">
-                <i class="fab fa-instagram"></i>
-              </a>
             </li>
             <li class="nav-item">
               <a class="contact" href="#">Contact</a>
@@ -75,6 +65,7 @@
     </div>
 
   </body>
+  
   {% include footer.html %}
 
 </html>

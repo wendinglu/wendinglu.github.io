@@ -24,106 +24,60 @@ title: Wending Lu UX Design - Aurora Redesign
   Mar 2018 — Jan 2019
 </div>
 
-<div class="work-image full-grid"></div>
-
-<h3>Objective</h3>
-<div class="pd">
-  <p>
-    Necessitated by an urgent directive to reduce churn, I led the research and redesign of Aurora Solar, a complex enterprise app used by thousands of solar companies.
-  </p>
+<div class="full-grid">
+  <div class="work-image">
+    <img src="/assets/redesign/newproject-640.gif">
+  </div>
 </div>
 
-<h3>Redesign need</h3>
-<div class="pd">
-  <p>
-    Aurora is a web platform for professional solar installers to create 3D models and simulations of solar systems, who then present and sell those systems to home- and commercial property owners. It’s a new kind of B2B software product that has emerged in an industry whose worker count has burgeoned <a target="_blank" alt="National Solar Foundation" href="https://www.thesolarfoundation.org/national/">159% since 2010.</a> Although Aurora has positioned itself as the most technologically superior product in this space, it has also carried a reputation for being expensive and difficult to use, the resulting amalgam of piecemeal engineering features. Ongoing feedback from users and customer teams showed that the usability issues were deeply ingrained in the existing layout, necessitating a re-evaluation to understand our users better.
-  </p>
-</div>
+<h3 class="full-center">Aurora is the premier platform for design and simulation for solar installers. I led a redesign to make it more intuitive, modern, and better serve the workflow of solar salespeople.</h3>
 
 <h3>User Research</h3>
-<div class="pd">
-  <p>
-    I, along with a PM, scheduled and conducted over 15 contextual inquiries with solar installers who were not already users of our platform. In these meetings, we asked and observed how they would prepare a solar system to sell to us (their unit task). Afterwards, we conducted a first-run usability test of the app to observe where mismatches in intuition happened in our app relative to the workflow they just explained to us.
-  </p>
+  <div class="pd">
+    <p>
+      A PM and I scheduled and conducted over 15 interviews and contextual inquiries with solar installers who were not already users. In these meetings, we asked and observed how they would prepare a solar system to sell to customers (their unit task).
+    </p>
 
   <h4>Personas</h4>
   <p>
-    Two distinct personas emerged: the salesperson and the technical designer. Though their end goals were the same: to create a solar system for a given project to sell to a particular client, their methodology and mindset were crucially different. The conflation of these personas was the root cause of trouble in Aurora’s app, which mostly mapped well to the expectations of the technical designer but was too rigid and required too many inputs for the lay salesperson.
+    Two distinct personas emerged: the salesperson and the technical designer. While their job responsibilities seem similar, their priorities and approaches were very different. The conflation of these personas was the root cause of trouble in Aurora’s app, which mostly mapped well to the expectations of the technical designer but was too rigid and required too many inputs for the salesperson.
   </p>
 
   <h4>
-    Solar Salesperson
+    The Salesperson
   </h4>
   <p>
-    With residential solar still being a very new industry, many salespeople viewed sales and customer interactions as a necessarily high-touch process—their knowledge and personalities being the primary selling point. They cared most about monopolizing a customer’s attention, which meant getting a foot in the door before competitors, impressing them, gaining their trust in person, and closing the deal promptly. One mentioned that “being the fourth or fifth offer to reach a homeowner was basically a loss.”
-  </p>
-  <p>
-    They made quick (and some might consider flagrant) design assumptions during the sales process in the name of speed, and they would put in more or less effort depending on how hot the lead was. They needed Aurora to quickly churn out a design for them to sell, not to configure endlessly and accurately.
+    Salespeople viewed their personality and presence as being key to educating customers and closing deals. They cared most about monopolizing a customer’s attention, which meant getting a foot in the door before competitors, impressing them, gaining their trust in person, and closing the deal promptly. As such, they would create their designs very quickly.
   </p>
   <h4>
-    Solar Designer
+    The Technical Designer
   </h4>
   <p>
-    The solar designer’s workflow already matched Aurora’s very well—they wanted to create accurate, detailed systems and criticized competitors who weren't as diligent. While they sometimes took on sales roles too at smaller companies, they typically worked as production people at larger companies to create designs to hand off to other salespeople.
+    They wanted to create accurate, detailed systems and criticized competitors who weren't as diligent. While they sometimes took on sales roles too at smaller companies, they typically worked as production people at larger companies to create designs to hand off to other salespeople.
   </p>
 </div>
 
-<h3>Insights</h3>
-<div class="pd">
-  <p>
-    We had to modify the workflow to accommodate the sales persona, who outnumber technical designers by a factor of 10 in the market.
-  </p>
-<h4>
-  Time to completion has to feel like 5 minutes
-</h4>
-  <p>
-    Salespeople bemoaned a circumstance where they showed up late to the table after other competitors had already reached a homeowner. In viewing solar to be a personality-driven sale, being late meant the customer's psyche was already occupied by other agents.
-  </p>
-<h4>
-  Steps had to be flexible
-</h4>
-  <p>
-    Salespeople adjust how much effort and accuracy they put into quotes based on how serious the homeowner or lead seems to be. They wanted to be able to churn out something low-effort, skip steps, or rest on safe assumptions and rules-of-thumb in low-confidence scenarios.
-  </p>
-<h4>
-  Pricing was mismatched
-</h4>
-  <p>
-    Salespeople at small-medium solar shops were operating on small margins and only a few sales per month. At that point, our pricing strategy of charging $259/user/mo was not only prohibitive in price compared to their expectations (roughly $100 total per month), but the per user pricing also prevented multiple people in the company from trying out the product to begin with.
-  </p>
-</div>
-
-<h3>Redesigned Wireframes</h3>
+<h3>Concepts and Wireframe Testing</h3>
 
 <div class="full-image">
-  <img src="/assets/images/redesign-wireframe.png">
+  <img src="/assets/redesign/redesign-wireframe.png">
 </div>
 
 <div class="pd">
   <p>
-    We revamped the layout and navigation to focus on a single design funnel, simplifying the information architecture, highlighting an easier and more natural funnel progression
+    We revamped the layout and navigation to focus on a single design funnel. We also simplified the information architecture based on how users talked about their steps.
   </p>
   <p>
-    We identified and incorporated smart automation in key areas that were previously manual. These took the form of three big projects:
+    We also saw a big opportunity for innovation with smart automation and defaults, using the project coordinates to connect with utility APIs, using our computer vision abilities to create base house models, and integrating with financing partners to initiate the application process in-app.
   </p>
-  <ol>
-    <li>Integrate with Genability, a service that provides API for a geo-located utility rate data with high accuracy. This was previously a manual selection that would constantly be a workflow-stopper</li>
-    <li>Use computer vision to help draw simple roof faces in one motion. Previously, users had to model the entire house and manually adjust all the roof pitches. We found that it was critical to be able to quickly model only the relevant area and smartly supplement height and roof pitch.</li>
-    <li>Integrate with financiers and allow users to select from commercial loan packages. Previously, users had to call into support to figure out how to create a loan-modeler using our builder. We found it was a large value add to automate this part by creating direct integrations with the financiers, such that users could just select their product from a list. In addition to remarkably improved usability, this provided a compelling new business vertical where Aurora could take a referral fee from the loan approval.</li>
-  </ol>
 </div>
 
-<h3>Results</h3>
+<h3>Final Design</h3>
 <div class="pd">
  <p>
-   User tests of the lo-fi mocks were extremely successful and intuitive. The most major change made at this step was adjusting the information architecture of two major sections within a solar design—merging the pricing and financing (loan) sections into one.
-  </p>
-
-  <h4>Hi-Fi Prototypes tested with overwhelming success</h4>
-  <p>
-    The Hi-Fi redesign included surveying every component and function of the app and creating a brand new Design System. Read about that in a different post.
+    The Hi-Fi redesign included surveying every component and function of the app and creating a brand new design system.
   </p>
   <p>
-    We recruited many of the users we initially tested with, as well as some new users to complete tasks using a Sketch and Invision prototypes of the hi-fi mocks. We received overwhelming market confirmation by asking if users would be willing to put down a down-payment today for access to a Beta release of this product—an offer that nearly 100% of users tested committed to!
+    We recruited many of the users we initially tested the lo-fi mocks with, as well as some new users to complete tasks using a Sketch and Invision prototypes of the hi-fi mocks. We received overwhelming market confirmation by asking if users would be willing to put down a down-payment today for access to a Beta release of this product—an offer that nearly 100% of users tested committed to.
   </p>
 </div>

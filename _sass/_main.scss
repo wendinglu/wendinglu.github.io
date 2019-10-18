@@ -31,6 +31,10 @@ p, ol {
   &:first-child { margin-top: 0}
 }
 
+.normal {
+  font-weight: normal;
+}
+
 body {
   color: $body-text-color;
 }
@@ -48,20 +52,20 @@ h1, .h1 {
 h2, .h2 {
   font-size: $h2-font-size;
   margin-bottom: $h2-font-size;
+  font-weight: 600;
   line-height: 1.2;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.2px;
 }
 
 h3 {
   margin-top: 0px;
   font-size: $h3-font-size;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 h4 {
-  font-size: 1rem;
+  font-size: 1em;
   font-weight: 600;
-  text-transform: uppercase;
 }
 
 h5 {
@@ -102,9 +106,22 @@ ul {
   padding: 0;
 }
 
+.grid-image {
+  height: 100%;
+  max-height: 480px;
+  @include md { max-height: 640px }
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+
 //MAIN
 .full-grid {
   grid-column: 1 / -1;
+  justify-self: stretch;
 }
 
 .main-index {
@@ -123,7 +140,7 @@ footer {
   max-width: 1140px;
   margin: auto;
 
-  font-size: 1rem;
+  font-size: 0.8rem;
   color: $gray-4;
 
   .long-logo {
