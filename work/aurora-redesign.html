@@ -30,17 +30,39 @@ title: Wending Lu UX Design - Aurora Redesign
   </div>
 </div>
 
-<h3 class="full-center">Aurora is the premier platform for design and simulation for solar installers. I led a redesign to make it more intuitive, modern, and better serve the workflow of solar salespeople.</h3>
+<h3 class="full-center">Aurora is the premier platform for the design and simulation for solar installers. I led a redesign to make it more intuitive, modern, and better serve the workflow of solar salespeople.</h3>
+
+<h3>Objective</h3>
+<div class="pd">
+  <h4>Address high churn for a premium b2b saas product.</h4>
+  <p>
+    Aurora is a web platform for professional solar installers to create 3D models and simulations of solar systems, who then present and sell those systems to home- and commercial property owners. Although Aurora has positioned itself as the most technologically superior product in this space, it has also carried a reputation for being expensive and difficult to use, the resulting amalgam of piecemeal engineering features. Ongoing feedback from users and customer teams showed that the usability issues were deeply ingrained in the existing layout, necessitating a re-evaluation to understand our users better.
+  </p>
+</div>
 
 <h3>User Research</h3>
-  <div class="pd">
-    <p>
-      A PM and I scheduled and conducted over 15 interviews and contextual inquiries with solar installers who were not already users. In these meetings, we asked and observed how they would prepare a solar system to sell to customers (their unit task).
-    </p>
+<div class="pd">
+  <p>
+    A PM and I scheduled and conducted over 15 contextual inquiries with solar installers who were not already users of our platform. In these meetings, we asked and observed how they would prepare a solar system to sell to us (their unit task). Afterwards, we conducted a first-run usability test of the app to observe where mismatches in intuition happened in our app relative to the workflow they just explained to us.
+  </p>
+</div>
 
+
+<div class="work-image">
+</div>
+
+
+<div class="pd">
   <h4>Personas</h4>
   <p>
     Two distinct personas emerged: the salesperson and the technical designer. While their job responsibilities seem similar, their priorities and approaches were very different. The conflation of these personas was the root cause of trouble in Aurora’s app, which mostly mapped well to the expectations of the technical designer but was too rigid and required too many inputs for the salesperson.
+  </p>
+
+  <h4>
+    The Technical Designer
+  </h4>
+  <p>
+    They wanted to create accurate, detailed systems and criticized competitors who weren't as diligent. While they sometimes took on sales roles too at smaller companies, they typically worked as production people at larger companies to create designs to hand off to salespeople.
   </p>
 
   <h4>
@@ -49,15 +71,44 @@ title: Wending Lu UX Design - Aurora Redesign
   <p>
     Salespeople viewed their personality and presence as being key to educating customers and closing deals. They cared most about monopolizing a customer’s attention, which meant getting a foot in the door before competitors, impressing them, gaining their trust in person, and closing the deal promptly. As such, they would create their designs very quickly.
   </p>
-  <h4>
-    The Technical Designer
-  </h4>
   <p>
-    They wanted to create accurate, detailed systems and criticized competitors who weren't as diligent. While they sometimes took on sales roles too at smaller companies, they typically worked as production people at larger companies to create designs to hand off to other salespeople.
+    They made quick (and some might consider flagrant) design assumptions during the sales process in the name of speed, and they would put in more or less effort depending on how hot the lead was. They needed Aurora to quickly churn out a design for them to sell, not to configure endlessly and accurately.
+  </p>
+  <h4>Task Analysis</h4>
+</div>
+
+<div class="full-image">
+  <img src="/assets/redesign/workflow-designer.png">
+  <img src="/assets/redesign/workflow-sales.png">
+</div>
+
+<div class="pd">
+  <p>
+    I laid out the workflows of each persona in a narrative format, describing each step practically as well as incorporating observations from the empathy maps. This flow table made it easy for the rest of the team to understand where the product needed to serve the solar salesperson.
+  <p>
+</div>
+
+<h3>Insights</h3>
+<div class="pd">
+  <h4>Time to completion has to feel like 5 minutes</h4>
+  <p>
+    Salespeople bemoaned a circumstance where they showed up late to the table after other competitors had already reached a homeowner. In viewing solar to be a personality-driven sale, being late meant the customer's psyche was already occupied by other agents.
+  </p>
+  <h4>Steps had to be flexible</h4>
+  <p>
+    Salespeople adjust how much effort and accuracy they put into quotes based on how serious the homeowner or lead seems to be. They wanted to be able to churn out something low-effort, skip steps, or rest on safe assumptions and rules-of-thumb in low-confidence scenarios.
+  </p>
+  <h4>Little to no required configuration</h4>
+  <p>
+    Salespeople went through their task with a lot of intuitive assumptions based on experience and just didn't know or care about many advanced nuances. This was a clear mismatch to our product which required spelling out and precisely configuring all of these assumptions.
+  </p>
+  <h4>Mismatched pricing model</h4>
+  <p>
+    Salespeople at small-medium solar shops were operating on small margins and only a few sales per month. At that point, our pricing strategy of charging $259/user/mo was not only prohibitive in price compared to their expectations (roughly $100 total per month), but the per user pricing also prevented multiple people in the company from trying out the product to begin with. Users universally shared logins, which also contributed to a poor experience for each one.
   </p>
 </div>
 
-<h3>Concepts and Wireframe Testing</h3>
+<h3>Prototyping and Testing</h3>
 
 <div class="full-image">
   <img src="/assets/redesign/redesign-wireframe.png">
@@ -70,6 +121,11 @@ title: Wending Lu UX Design - Aurora Redesign
   <p>
     We also saw a big opportunity for innovation with smart automation and defaults, using the project coordinates to connect with utility APIs, using our computer vision abilities to create base house models, and integrating with financing partners to initiate the application process in-app.
   </p>
+
+  <h4>Testing</h4>
+  <p>
+    We tested clickable wireframes with 10 users, some new, some existing clients, broadly tasking people with creating a sales proposal. User tests of the lo-fi mocks were extremely successful and intuitive, as every user was able to navigate through the flow to completion. The most major change made at this step was adjusting the information architecture of two major sections within a solar design—merging the system pricing and financing sections into one as we noticed people conceptually grouping those together in one intention.
+  </p>
 </div>
 
 <h3>Final Design</h3>
@@ -77,7 +133,32 @@ title: Wending Lu UX Design - Aurora Redesign
  <p>
     The Hi-Fi redesign included surveying every component and function of the app and creating a brand new design system.
   </p>
+</div>
+
+<div class="work-image">
+  <img class="raised" src="/assets/redesign/hifi-overview.png">
+</div>
+<div class="work-image">
+  <img class="raised" src="/assets/redesign/hifi-index.png">
+</div>
+<div class="work-image">
+  <img class="raised" src="/assets/redesign/hifi-cad-sales.png">
+</div>
+<div class="work-image">
+  <img class="raised" src="/assets/redesign/hifi-cad-designer.png">
+</div>
+<div class="work-image">
+  <img class="raised" src="/assets/redesign/hifi-proposal.png">
+</div>
+<div class="work-image">
+  <img class="raised" src="/assets/redesign/hifi-database.png">
+</div>
+
+<div class="pd">
   <p>
     We recruited many of the users we initially tested the lo-fi mocks with, as well as some new users to complete tasks using a Sketch and Invision prototypes of the hi-fi mocks. We received overwhelming market confirmation by asking if users would be willing to put down a down-payment today for access to a Beta release of this product—an offer that nearly 100% of users tested committed to.
+  </p>
+  <p>
+    As of this writing, this project is still undergoing development.
   </p>
 </div>

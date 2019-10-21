@@ -46,10 +46,11 @@
 
 // work image preview
 .work-image {
-  height: 400px;
+  height: 380px;
   background-color: #f2f2f2;
   text-align: center;
   padding: 25px;
+  justify-self: stretch;
 
   display: flex;
   align-items: center;
@@ -67,12 +68,16 @@
     width: 100%;
   }
 
+  .raised {
+    box-shadow: 0 29px 48px rgba(0,0,0,0.07), 0 15px 12px rgba(0,0,0,0.02);
+  }
   &.lg {
     @include md { height: 480px }
   }
 }
 
 .pd {
+
   @include md {
     grid-column: 2 / span 1;
   }
