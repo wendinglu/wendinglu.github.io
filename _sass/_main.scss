@@ -26,7 +26,7 @@ a {
 }
 
 p, ol {
-  font-size: 1.3rem;
+  font-size: 1.15rem;
   // text-align: justify;
 
   &:first-child { margin-top: 0}
@@ -71,7 +71,7 @@ h4 {
 
 h5 {
   font-size: $h5-font-size;
-  font-weight: normal;
+  font-weight: 600;
   line-height: 1.5;
 }
 
