@@ -22,7 +22,7 @@ title: Wending Lu • UX Design
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   Wending Lu is a San Francisco-based UX designer.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/" # the subpath of your site, e.g. /blog
 url: "http://www.wending.lu" # the base hostname & protocol for your site, e.g. http://example.com
 instagram: thewending
 
@@ -31,6 +31,7 @@ defaults:
       path: "assets/images"
     values:
       image: true
+
 # Build settings
 
 # Exclude from processing.
