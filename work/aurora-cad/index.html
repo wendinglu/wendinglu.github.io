@@ -1,0 +1,187 @@
+---
+layout: work
+title: Wending Lu UX Design - Aurora CAD
+---
+
+<div class="full-grid">
+  <div class="project-supertitle">
+    Aurora Solar
+  </div>
+
+  <h1>Interactive CAD Workspace Redesign</h1>
+</div>
+
+<div class="project-subtitle">
+  <ul class="roles-list">
+    <li>Sole UX Designer</li>
+    <li>UX Researcher</li>
+    <li>Prototype Testing</li>
+    <li>Visual Design</li>
+  </ul>
+</div>
+
+<div class="project-subtitle">
+  Mar 2018 — Jan 2019
+</div>
+
+<div class="full-grid">
+  <div class="work-image">
+    <video autoplay loop poster="/assets/newcad/newcad-poster.jpg">
+      <source src="/assets/newcad/newcad-480.mp4" type="video/mp4">
+      Sorry, video was unable to load.
+    </video>
+  </div>
+</div>
+
+<h3 class="full-center">Aurora's bread and butter a 3D CAD interface for modeling roofs and solar designs. I led a complete redesign of its front-end interactive interface.</h3>
+
+<h3>Objective</h3>
+<div class="pd">
+  <h4>Redesign an advanced 3D interactive interface to address learning curve and usability</h4>
+  <p>
+    Aurora is a web platform for professional solar installers to create 3D models and simulations of solar systems, who then present and sell those systems to home- and commercial property owners. Aurora's bread and butter is its interactive interface for modeling roofs and solar designs that generates industry-leading simulations. However, no user was able to figure out exactly how to use it without substantial training, and even some basic heuristic evaluation showed a lot of unintuitive interactions. While the back-end and computation processes were mostly locked in here, I led a redesign of the front end interface from the ground up.
+  </p>
+</div>
+
+<h3>User Research</h3>
+<div class="pd">
+  <p>
+    I observed 20 new users in the trial phase of the platform trying to create one of their first solar designs in the app. I also tried to understand their mental model for thinking about creation by first asking them to conceptually describe their goals.
+  </p>
+</div>
+
+
+<div class="pd">
+  <h4>Observations</h4>
+  <p>
+    The product was so problematic that there was no way to finish any usability test without significant intervention on my part as a moderator. I made a note of every part I had to explain, both large concepts and small interactions, as an area to improve. Some of the largest areas were below.
+
+    <ol>
+      <li>
+        <h5>Lack of hierarchy and direction.</h5>
+        Users were dropped into an editor with no directive where to look next or what was required of them. The most common question was "Now what?"
+      </li>
+      <li>
+        <h5>Hidden interactions.</h5>
+        Users were required to right click, double click, ctrl-Click, etc. for many required behaviors and there was no explanation for those. Many of those also went against convention.
+      </li>
+      <li>
+        <h5>Information Architecture mismatch.</h5>
+        Users had to go back and forth across multiple pages to complete their core task (iterate on a solar design's performance)
+      </li>
+      <li>
+        <h5>Mismatch of concepts.</h5>
+        Users were asked to modify 3D properties in 2D, requiring a kind of spatial conceptualization that many people didn't have
+      </li>
+      <li>
+        <h5>Glitchy interactions.</h5>
+        Though bugs are a fact of life, there were so many that many interactions were highly irreversible or disruptive.
+      </li>
+    </ol>
+  </p>
+</div>
+
+<h3>Design</h3>
+<div class="pd">
+  <h4>Simplifying the workflow</h4>
+  <p>The most important objective was to simplify the workflow and make it match users' conceptual goals and models.</p>
+
+  <h4>Organized Layout</h4>
+  <p>
+    Previously, every tool and setting was listed in a single row of icons on the right. I surveyed all of the functions available and grouped them, distributing them visually around the canvas by function, applying Gestalt principles of grouping.
+  </p>
+  <h4>Intuitive and Discoverable Interactions</h4>
+  <p>
+    Since the total number of functions this CAD viewer enabled was quite manageable, I opted to use a single left-click interaction whenever possible. In addition to being more discoverable, this would also build extensibility into future tablet-compatibility.
+  </p>
+</div>
+
+<figure class="fit-image">
+  <img src="/assets/newcad/inspector.jpg">
+  <figcaption>
+    A permanently docked inspector offers users a fixed and discoverable place to modify properties of components.
+  </figcaption>
+</figure>
+
+<div class="pd">
+  <h4>Docked Inspector</h4>
+  <p>
+    Previously, users had to right click on canvas elements to adjust their properties--an essential part of customizing their design. Many users weren't aware of that interaction or which properties would be in there, and the floating properties box that appeared often also got in the way visually. I solved this with a permanent location for property settings.
+  </p>
+</div>
+
+<figure class="fit-image">
+  <img src="/assets/newcad/task-diagram.jpg">
+  <figcaption>
+    Compared to the old flow, the update moves users' iterative steps to be on the same page or section.
+  </figcaption>
+</figure>
+
+<div class="pd">
+  <h4>Revised Information Architecture</h4>
+  <p>
+    Previously, users had to visit 3 pages sequentially to complete a model. I saw that many people needed to move back and forth between those steps, and that the order did not match their mental working model. Crucially, people needed to simulate (the last step) and go back and iterate, a task that was extremely cumbersome if they had to leave the page. I worked with engineers to solve technical roadblocks to a solution that allowed users to seamlessly switch between 2D and 3D, and run the simulation anytime on the page.
+  </p>
+</div>
+
+<div class="pd">
+  <h4>Preventing Death by a Thousand Cuts</h4>
+  <p>
+    While the above were the most notable changes, there were many small interactions that created a frustrating experience in amalgam—for example, things that wouldn't highlight on selection, things that wouldn't snap when dragged, etc. I made it a priority to note and address hundreds of these sorts of expectations that emerged both in usability tests and in personal testing.
+  </p>
+</div>
+
+<h3>Prototyping and Testing</h3>
+
+<div class="pd">
+  <p>
+    Wireframes were instead tested mostly for layout and organization to see if users could quickly identify functional and navigational areas. Since this was an interactive tool whose overall function and task was already market-validated but whose implementation was highly problematic, we focused more on testing with alpha and beta releases.
+  </p>
+</div>
+
+<figure class="fit-image">
+  <div class="work-image">
+    <img src="/assets/newcad/cad-wireframe.jpg">
+  </div>
+  <figcaption>
+  Initial Lo-fi Wireframes illustrating the new organization and 3D workspace.
+  </figcaption>
+</figure>
+
+<figure class="fit-image">
+  <div class="work-image">
+    <img src="/assets/newcad/cad-wireframe2.jpg">
+  </div>
+</figure>
+
+
+<h3>Final Design</h3>
+<div class="pd">
+ <p>
+    The final design included going through every possible workflow and marking clear usability paths, error handling, and messaging in alignment with the primary direction tested.
+  </p>
+</div>
+
+<figure class="fit-image">
+  <div class="work-image">
+    <img src="/assets/newcad/cad-before.jpg">
+  </div>
+  <figcaption>Before: Confusing menu and lack of Gestalt organization.</figcaption>
+</figure>
+
+<figure class="fit-image">
+  <div class="work-image">
+    <img src="/assets/newcad/cad-after.jpg">
+  </div>
+  <figcaption>After: Clearer organization, differentiated and appropriate input components, updated visual design, and much improved information architecture.</figcaption>
+</figure>
+
+<h3>Testing and Release</h3>
+<div class="pd">
+  <p>
+    For the hi-fi prototype, I worked with engineers to dial in a private beta test that could be made available to a single enterprise client since the success of this particular product depended so much on the interaction design component. The beta test was so successful the client rolled it out to their entire salesforce within two weeks, instead of waiting for a final release.
+  </p>
+  <p>
+    We eventually released it to all users as a gradual roll-out, and there were a few months of discovering and iterating additional bugs and micro-flows afterwards. However, initially, only about 40% of users created a design were able to run a solar simulation in the first week. In a stable period after release, over 90% of new users were able to. Our NPS scores similarly improved during this time period, with far fewer detractors who cited the usability of this piece of the product.
+  </p>
+</div>
