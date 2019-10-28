@@ -244,8 +244,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  github-pages
-  jekyll
+  github-pages (~> 202)
+  jekyll (~> 3.8.5)
   wdm (~> 0.1.1)
 
 RUBY VERSION
