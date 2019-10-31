@@ -1,0 +1,32 @@
+// Lists
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+//Formatted number
+
+ol {
+  list-style: none;
+  counter-reset: step;
+
+  li {
+    position: relative;
+    counter-increment: step;
+    margin-bottom: 5px;
+  }
+
+  li:before {
+    margin-right: 10px;
+    content: counter(step);
+    color: $gray-3;
+    text-align: right;
+    position: absolute;
+    left: -40px;
+    top: -0.5rem;
+    font-size: 1.4em;
+    font-weight: normal;
+  }
+}
