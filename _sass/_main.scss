@@ -24,7 +24,7 @@ a {
   font-weight: 600;
 
   &:hover {
-    text-decoration: underline;
+    text-decoration: none;
   }
 }
 
@@ -218,8 +218,12 @@ figcaption {
 
 .about-process {
   @extend .full-grid;
-  max-width: 28em;
-  margin: auto;
+  max-width: 26.5em;
+  margin: 0 0 0 auto;
+
+  &.left {
+    margin: 0 auto 0 0;
+  }
 }
 
 //Error text for password forms

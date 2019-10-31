@@ -8,7 +8,6 @@
 
 .work-item, .work-title, .work-subtitle, .work-date {
   text-decoration: none;
-  &:hover { text-decoration: none }
 }
 
 .work-title {
@@ -18,7 +17,13 @@
 }
 
 .work-date {
-  margin-left: 30px;
+  order: -1;
+
+  //Dual column
+  @include sm {
+    order: 0;
+    margin-left: 30px;
+  }
 }
 
 .work-subtitle, .work-date {
@@ -32,7 +37,13 @@
   margin-top: 1em;
   margin-bottom: 2em;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+
+  //Dual column
+  @include sm {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 
@@ -74,7 +85,7 @@
   }
 
   .raised {
-    box-shadow: 0 29px 48px rgba(0,0,0,0.07), 0 15px 12px rgba(0,0,0,0.02);
+    box-shadow: $raised-1;
   }
   &.lg {
     @include md { height: 480px }

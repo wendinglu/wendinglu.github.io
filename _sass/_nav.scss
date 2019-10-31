@@ -6,6 +6,9 @@
   z-index: 3; // Above other elements
   padding-bottom: 30px;
 
+  position: sticky;
+  top: 0px;
+
   // fonts
   font-size: $h4-font-size;
   font-weight: 600;
@@ -51,7 +54,7 @@
   height: 32px;
   position: absolute;
   top: 30px;
-  right: 30px;
+  right: 0px;
 }
 
 // checkbox control for hamburger
@@ -111,8 +114,9 @@
 
   // Hide the menu in mobile view
   position: absolute;
-  left: 0;
-  right: 0;
+  left: -30px; //Negating container margin
+  right: -30px;
+  top: 0;
   opacity: 1;
   transform-origin: 0% 0%;
   transform: translate(0, -100%) scaleY(0.5);
@@ -128,6 +132,9 @@
     padding: 0;
     border: none;
     transform: none;
+    background: transparent;
+    left: 0;
+    right: 0;
 
     li { display: inline-block }
     li:not(:last-child) { padding-right: 30px }
